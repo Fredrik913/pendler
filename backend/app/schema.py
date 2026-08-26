@@ -22,6 +22,7 @@ class Leg(BaseModel):
 
 
 class TripResult(BaseModel):
+    id: str
     origin_name: str
     departure_time: datetime
     destination_name: str

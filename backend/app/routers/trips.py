@@ -29,6 +29,7 @@ def _build_leg(leg: dict) -> Leg:
 
 def _build_trip(trip: dict) -> TripResult:
     return TripResult(
+        id=trip["tripId"],
         origin_name=trip["Origin"]["name"],
         departure_time=_combine(trip["Origin"]["date"], trip["Origin"]["time"]),
         destination_name=trip["Destination"]["name"],
