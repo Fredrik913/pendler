@@ -1,4 +1,3 @@
-// components/StopSearchInput.tsx
 import type { Stop } from "../../types/stops";
 
 type Props = {
@@ -23,7 +22,7 @@ export function StopSearchInput({
   selected,
 }: Props) {
   return (
-    <div className="border rounded-xl p-2 w-full mb-3 focus-within:ring-2 focus-within:ring-blue-500">
+    <div className="border border-gray-200 rounded-2xl p-2 w-full mb-3 focus-within:ring-2 focus-within:ring-blue-500">
       <input
         type="text"
         placeholder={placeholder}
@@ -34,12 +33,12 @@ export function StopSearchInput({
       />
       {isFetching && <p>Söker...</p>}
       {!selected && results.length > 0 && (
-        <ul className=" p-2 w-full rounded-xl mt-2">
+        <ul className="p-2 w-full rounded-xl mt-2 list-none">
           {results.map((stop) => (
             <li
               key={stop.id}
               onClick={() => onSelect(stop)}
-              className="cursor-pointer hover:bg-gray-200"
+              className="cursor-pointer py-1 hover:bg-gray-100"
             >
               {stop.name}
             </li>

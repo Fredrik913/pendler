@@ -19,7 +19,7 @@ function Index() {
   //Usestate variable to store the fetched data
 
   return (
-    <div className="max-w-[768px] mx-auto p-4 mt-6 ">
+    <div className="max-w-[600px] mx-auto mt-6 p-4">
       <SearchStop />
     </div>
   );

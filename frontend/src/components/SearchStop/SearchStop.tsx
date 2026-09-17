@@ -1,13 +1,13 @@
 import { useStopSearch } from "../../hooks/useStopSearch";
+import { StopSearchInput } from "../StopSearchInput/StopSearchInput";
 import TripPlanner from "../TripPlanner/TripPlanner";
-import { StopSearchInput } from "./StopSearchInput";
 
 const SearchStop = () => {
   const origin = useStopSearch();
   const dest = useStopSearch();
 
   return (
-    <div className="text-xl  ">
+    <div className="text-xl">
       <StopSearchInput
         placeholder="Sök startpunkt..."
         input={origin.input}
@@ -28,7 +28,7 @@ const SearchStop = () => {
         onSelect={dest.setSelected}
         selected={dest.selected}
       />
-      <div className="mt-4 text-xl">
+      <div className="mt-4">
         <TripPlanner
           originId={origin.selected?.id}
           destId={dest.selected?.id}

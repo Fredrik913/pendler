@@ -17,6 +17,7 @@ export function useStopSearch() {
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
+      setSelected(null);
       setQuery(input);
     }
   };
