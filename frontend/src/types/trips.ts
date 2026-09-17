@@ -10,6 +10,7 @@ type Leg = {
 };
 
 type TripResult = {
+  id: string;
   origin_name: string;
   departure_time: string;
   destination_name: string;
