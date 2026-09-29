@@ -11,7 +11,7 @@ const SearchStop = () => {
       <div className="flex items-center flex-col gap-4 bg-white rounded-2xl shadow-lg ring-1 ring-gray-100 p-6">
         <h1 className="text-2xl font-semibold self-start">
           Sök hållplats{" "}
-          <span className="text-sky-600 text-5xl font-bold tracking-widest align-middle">
+          <span className="text-sky-600 text-5xl font-bold tracking-widest align-middle -translate-y-2 inline-block">
             ...
           </span>
         </h1>
