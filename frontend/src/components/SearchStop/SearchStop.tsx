@@ -1,7 +1,7 @@
 import { useStopSearch } from "../../hooks/useStopSearch";
 import { StopSearchInput } from "../StopSearchInput/StopSearchInput";
 import TripPlanner from "../TripPlanner/TripPlanner";
-
+// Samlar sökfälten för startpunkt och destination, samt visar reseplaneraren med de valda hållplatserna.
 const SearchStop = () => {
   const origin = useStopSearch();
   const dest = useStopSearch();

@@ -1,4 +1,5 @@
 import type { Stop } from "../../types/stops";
+import StopSearchResults from "./StopSearchResults";
 
 type Props = {
   placeholder: string;
@@ -10,7 +11,7 @@ type Props = {
   onSelect: (stop: Stop) => void;
   selected: Stop | null;
 };
-
+// Tar emot input från användaren och visar sökresultat för hållplatser.
 export function StopSearchInput({
   placeholder,
   input,
@@ -33,17 +34,7 @@ export function StopSearchInput({
       />
       {isFetching && <p>Söker...</p>}
       {!selected && results.length > 0 && (
-        <ul className="w-full rounded-xl mt-2 list-none border-t border-gray-200 space-y-1">
-          {results.map((stop) => (
-            <li
-              key={stop.id}
-              onClick={() => onSelect(stop)}
-              className="cursor-pointer py-2 hover:bg-gray-200 rounded-lg px-2"
-            >
-              {stop.name}
-            </li>
-          ))}
-        </ul>
+        <StopSearchResults results={results} onSelect={onSelect} />
       )}
     </div>
   );
